@@ -16,10 +16,17 @@
 
     <div class="container">
         {% block content %}
-            <h1> Welcome To Health Insurance Claim Project</h1>
+            <h1> Contact Form</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{form_key.as_p}}
+                <input type="submit" value="submit" class="btn btn-outline-success">
+            </form>
 
 
-            <img src="{% static 'health.jpg'%}" width="1300px" height="500px">
+
+
         {% endblock %}
     </div>
 

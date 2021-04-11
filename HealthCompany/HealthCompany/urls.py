@@ -18,9 +18,17 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+admin.site.site_header = "HIC Admin"
+admin.site.site_title = "HIC Admin Portal"
+admin.site.index_title = "Welcome to HIC Portal"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('baseapp.urls')),
     path('hospitals/', include('hospital.urls')),
     path('patients/', include('patient.urls')),
+    path('insurancecompany/', include('insurancecompany.urls')),
+    path('claims/', include('claims.urls')),
+    path('user/', include('user.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

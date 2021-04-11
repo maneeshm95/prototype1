@@ -4,7 +4,7 @@ from .models import Hospital_Type,Hospital
 
 
 # admin.site.register(Hospital)
-# admin.site.register(Hospital_Type)
+admin.site.register(Hospital_Type)
 
 class HospitalAdmin(admin.ModelAdmin):
     prepopulated_fields = {
